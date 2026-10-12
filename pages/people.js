@@ -6,7 +6,7 @@
   root.setAttribute('data-people-init', '1');
 
   /* ====== UBAH DI SINI ====== */
-  var videoSrc = '../video/ucapan.mov';   // relatif terhadap pages/ → folder video/ di root proyek
+  var videoSrc = '../video/ucapan.mp4';   // relatif terhadap pages/ → folder video/ di root proyek
   var CAPTION  = 'Ucapan ulang tahun dari orang-orang yang menyayangimu 💙';
   var SHARE_URL = '';                     // kosong = alamat halaman utama website ini
 
