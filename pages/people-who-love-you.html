@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The People Who Love You</title>
+  <link rel="icon" type="image/x-icon" href="../assets/snoopy-star.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="people.css">
+</head>
+<body>
+  <a class="back" id="backLink" href="../landing.html" data-leave>← kembali</a>
+
+  <!-- stiker dekorasi: terlihat di sisi layar kalau videonya tidak memenuhi layar -->
+  <div class="decor" aria-hidden="true">
+    <img src="../assets/jellyfish.png" style="left:2%; top:10%; width:7vw; rotate:8deg" alt="">
+    <img src="../assets/moon.png" style="right:3%; top:8%; width:6vw; rotate:-10deg" alt="">
+    <img src="../assets/snoopy-music.png" style="left:3%; bottom:12%; width:11vw; rotate:-5deg" alt="">
+    <img src="../assets/star-denim.png" style="right:4%; bottom:16%; width:6vw; rotate:12deg" alt="">
+  </div>
+
+  <main class="player" id="player">
+    <video id="video" playsinline preload="auto"></video>
+
+    <!-- tampil kalau file video belum ada -->
+    <div class="missing" id="missing" hidden>
+      <span class="tape" style="top:-12px; left:40%; rotate:-4deg"></span>
+      <h2>video belum dipasang</h2>
+      <p>Taruh videonya di <b>video/ucapan.mp4</b><br>atau ubah <code>videoSrc</code> di <b>people.js</b>.</p>
+      <button class="chip" id="demoEnd">lihat contoh panel "bagikan"</button>
+    </div>
+
+    <button class="unmute" id="unmute" hidden>🔊 ketuk untuk menyalakan suara</button>
+    <button class="bigplay" id="bigplay" aria-label="Putar" hidden></button>
+
+    <!-- kontrol video -->
+    <div class="controls" id="controls">
+      <span class="tape" style="top:-10px; left:18px; rotate:-6deg; width:70px"></span>
+      <span class="tape" style="top:-10px; right:18px; rotate:5deg; width:70px"></span>
+      <input class="seek" id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Posisi video">
+      <div class="row">
+        <button class="ic" id="back10" aria-label="Mundur 10 detik"></button>
+        <button class="ic ic--main" id="play" aria-label="Putar / jeda"></button>
+        <button class="ic" id="fwd10" aria-label="Maju 10 detik"></button>
+        <span class="time" id="time">0:00 / 0:00</span>
+        <span class="spacer"></span>
+        <button class="chip" id="speed" aria-label="Kecepatan">1×</button>
+        <button class="ic" id="mute" aria-label="Bisukan"></button>
+        <input class="vol" id="vol" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume">
+        <button class="ic" id="pip" aria-label="Picture in picture" hidden></button>
+        <button class="ic" id="fs" aria-label="Layar penuh"></button>
+      </div>
+    </div>
+
+    <!-- setelah video selesai -->
+    <section class="end" id="end" hidden>
+      <div class="card">
+        <span class="tape" style="top:-12px; left:42%; rotate:-3deg"></span>
+        <h2>terima kasih sudah menonton 💙</h2>
+        <p class="sub">kirim atau unggah video ini ke sosial mediamu. teks & gambarnya sudah disiapkan otomatis.</p>
+
+        <div class="caption"><p id="caption"></p></div>
+
+        <div class="share">
+          <button class="chip chip--main" id="shNative">Bagikan…</button>
+          <a class="chip" id="shWa"  target="_blank" rel="noopener">WhatsApp</a>
+          <a class="chip" id="shTg"  target="_blank" rel="noopener">Telegram</a>
+          <a class="chip" id="shX"   target="_blank" rel="noopener">X</a>
+          <a class="chip" id="shFb"  target="_blank" rel="noopener">Facebook</a>
+          <button class="chip" id="shIg">Instagram Story</button>
+          <button class="chip" id="shCopyText">Salin teks</button>
+          <button class="chip" id="shCopyLink">Salin tautan</button>
+        </div>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <button class="replay" id="replay">↺ putar ulang</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="people.js"></script>
+</body>
+</html>

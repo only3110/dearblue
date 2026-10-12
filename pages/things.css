@@ -1,0 +1,29 @@
+/* things.css — meja memorabilia + modal catatan. */
+body{background:radial-gradient(circle,rgba(255,255,255,.35) 0 2px,transparent 3px) 0 0/34px 34px,linear-gradient(180deg,var(--sky),var(--sky-light)) fixed}
+.head{text-align:center;padding:5.5rem 1rem 1rem}
+.head h1{font-family:var(--font-hand);font-size:clamp(2.2rem,7vw,4.2rem);line-height:1}
+.head p{font-family:var(--font-hand);font-size:1.5rem;color:var(--blue-mid)}
+.count{margin-top:.4rem;color:var(--navy)!important;font-family:var(--font-title)!important;font-size:.9rem!important;letter-spacing:.1em}
+.table{position:relative;max-width:1100px;margin:1rem auto 0;aspect-ratio:16/9}
+.thing{position:absolute;left:var(--x);top:var(--y);width:calc(var(--w)*1%);rotate:var(--r,0deg);padding:0;border:0;background:none;cursor:pointer;transition:translate .25s ease,scale .25s ease}
+.thing img{display:block;width:100%;height:auto;pointer-events:none;
+  filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff) drop-shadow(0 5px 6px rgba(29,58,107,.35))}
+.thing:hover,.thing:focus-visible{translate:0 -6px;scale:1.07}
+.thing.is-found::after{content:"♥";position:absolute;top:-6%;right:-6%;width:1.6em;height:1.6em;display:grid;place-items:center;border-radius:50%;background:var(--paper-cream);color:var(--blue-mid);font-size:.9rem;box-shadow:0 2px 4px rgba(29,58,107,.3)}
+.finale{padding:3rem 1rem 4rem;animation:fin .8s ease both}
+@keyframes fin{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+.overlay{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:1rem;background:rgba(14,28,56,.6);animation:fin .25s ease both}
+.note{position:relative;width:min(440px,100%);max-height:92svh;overflow:auto;padding:2.4rem 1.6rem 1.8rem;text-align:center;background:var(--paper-cream);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.note__paper{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;pointer-events:none}
+.note>*:not(.note__paper):not(.tape){position:relative}
+.note__x{position:absolute!important;top:8px;right:8px;width:42px;height:42px;border-radius:50%;border:2px solid var(--navy);background:var(--paper-cream);color:var(--navy);font-size:1.1rem;cursor:pointer}
+.note__thing{display:block;max-height:120px;width:auto;margin:0 auto 1rem}
+.note__text h2{font-family:var(--font-hand);font-size:2.2rem;line-height:1}
+.note__text p{margin-top:.6rem;line-height:1.65;text-align:left}
+.heart{position:fixed;top:-2rem;z-index:70;color:var(--blue-mid);pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{translate:var(--dr,0) 110vh;rotate:360deg}}
+/* ponsel: susunan mengalir (tanpa overflow horizontal) */
+@media (max-width:700px){
+  .table{display:flex;flex-wrap:wrap;gap:1.4rem 1rem;justify-content:center;aspect-ratio:auto;padding:1rem}
+  .thing{position:static;width:clamp(84px,calc(var(--w)*7vw),150px)}}
+@media (prefers-reduced-motion:reduce){.heart{display:none}}

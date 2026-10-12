@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hippi Birthdeey</title>
+  <link rel="icon" type="image/x-icon" href="assets/snoopy-star.png">
+  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!--
+    CARA PAKAI
+    - Setiap benda (polaroid / stiker) diatur lewat style di tag-nya:
+        --x  = posisi dari kiri (%)      --y = posisi dari atas (%)
+        --w  = lebar (satuan relatif)    --r = kemiringan (derajat)
+    - Semua benda bisa digeser (drag) dengan mouse / jari.
+    - Untuk memasang foto: di dalam <div class="polaroid__photo"> tulis
+        <img src="foto/foto1.jpg" alt="deskripsi foto">
+      (placeholder "+ foto" otomatis hilang kalau div-nya terisi)
+  -->
+  <main class="board">
+
+    <!-- ===== JUDUL (placeholder, ganti sesukamu) ===== -->
+    <section class="note">
+      <span class="tape tape--left"></span>
+      <span class="tape tape--right"></span>
+      <h1 class="note__title">HAPPIEST<br>BIRTHDAY</h1>
+      <p class="note__sub">my bluey lovey dovey</p>
+    </section>
+
+    <!-- ===== POLAROID (placeholder foto) ===== -->
+    <figure class="item polaroid" style="--x:7%; --y:5%; --w:15; --r:-7deg">
+      <span class="tape tape--top"></span>
+      <a class="polaroid-link" href="museum-of-you.html" aria-label="Buka Museum of You">
+        <div class="polaroid__photo"><img src="foto/foto1.jpg" alt=""></div>
+        <span class="polaroid__caption">Museum of You</span>
+      </a>
+    </figure>
+
+    <figure class="item polaroid" style="--x:78%; --y:4%; --w:15; --r:6deg">
+      <span class="tape tape--top"></span>
+      <a class="polaroid-link" href="story-of-us.html" aria-label="Buka Story of Us">
+        <div class="polaroid__photo"><img src="foto/foto2.jpg" alt="">  </div>
+        <span class="polaroid__caption">Story of Us</span>
+      </a>
+    </figure>
+
+    <figure class="item polaroid" style="--x:6%; --y:60%; --w:15; --r:5deg">
+      <span class="tape tape--top"></span>
+      <a class="polaroid-link" href="little-things.html" aria-label="Buka Little Things That Remind Me of You">
+        <div class="polaroid__photo"><img src="foto/foto3.jpg" alt=""></div>
+        <span class="polaroid__caption">Reminds me of You</span>
+      </a>
+    </figure>
+
+    <figure class="item polaroid" id="polaroid4" style="--x:76%; --y:58%; --w:15; --r:-6deg;">
+      <span class="tape tape--top"></span>
+      <a class="polaroid-link" href="people-who-love-you.html" aria-label="Buka The People Who Love You">
+        <div class="polaroid__photo"><img src="foto/foto4.jpg" alt=""></div>
+        <span class="polaroid__caption">The People who Love You</span>
+      </a>
+    </figure>
+
+    <!-- Photo strip (3 foto) -->
+    <figure class="item strip" style="--x:48%; --y:70%; --w:6.5; --r:-4deg">
+      <span class="tape tape--top"></span>
+      <div class="polaroid__photo"><img src="foto/strip1.jpg" alt=""></div>
+      <div class="polaroid__photo"><img src="foto/strip2.jpg" alt=""></div>
+      <div class="polaroid__photo"><img src="foto/strip3.jpg" alt=""></div>
+    </figure>
+
+    <!-- ===== STIKER (file ada di folder assets/) ===== -->
+    <img class="item sticker" src="assets/snoopy-music.png" alt="" style="--x:35%; --y:1%;  --w:11;  --r:-4deg">
+    <img class="item sticker" src="assets/jellyfish.png"    alt="" style="--x:73%; --y:7%;  --w:5;   --r:8deg">
+    <img class="item sticker" src="assets/moon.png"         alt="" style="--x:24%; --y:5%;  --w:8;   --r:-10deg">
+    <img class="item sticker" src="assets/star-denim.png"   alt="" style="--x:19%; --y:35%; --w:7;   --r:12deg">
+    <img class="item sticker" src="assets/butterfly.png"    alt="" style="--x:1%;  --y:41%; --w:10;  --r:-15deg">
+    <img class="item sticker" src="assets/flower.png"       alt="" style="--x:88%; --y:38%; --w:9;   --r:10deg">
+    <img class="item sticker" src="assets/snoopy-sleep.png" alt="" style="--x:55%; --y:17%; --w:11; --r:-2deg">
+    <img class="item sticker" src="assets/vinyl.png"        alt="" style="--x:73%; --y:37%; --w:7.5; --r:0deg">
+    <img class="item sticker" src="assets/shell.png"        alt="" style="--x:15%; --y:50%; --w:5;   --r:10deg">
+    <img class="item sticker" src="assets/snoopy-star.png"  alt="" style="--x:0.5%; --y:70%; --w:9;  --r:8deg">
+    <img class="item sticker" src="assets/stamp-japan.png"  alt="" style="--x:37%; --y:74%; --w:8;   --r:-8deg">
+    <img class="item sticker" src="assets/shark.png"        alt="" style="--x:58%; --y:70%; --w:7;   --r:-20deg">
+    <img class="item sticker" src="assets/stamp-prs.png"      alt="" style="--x:90%; --y:3%; --w:4;   --r:-12deg">
+    <!-- <img class="item sticker" src="assets/stamp-ny.png"     alt="" style="--x:66%; --y:63%; --w:6;   --r:9deg"> -->
+    <img class="item sticker" src="assets/camera.png"       alt="" style="--x:66%; --y:82%; --w:10;  --r:-5deg">
+    <img class="item sticker" src="assets/snoopy-bow.png"    alt="" style="--x:78%; --y:38%; --w:5;  --r:4deg">
+    <img class="item sticker" src="assets/headphones.png"   alt="" style="--x:91%; --y:75%; --w:7.5; --r:-8deg">
+    <!-- <img class="item sticker" src="assets/star-silver.png"  alt="" style="--x:27%; --y:33%; --w:4.5; --r:-15deg"> -->
+    <img class="item sticker" src="assets/pins.png"         alt="" style="--x:68%; --y:60%; --w:3.5; --r:-20deg">
+    <img class="item sticker" src="assets/ball-8.png"       alt="" style="--x:27%; --y:83%; --w:6;   --r:0deg">
+  </main>
+
+<div class="music-control">
+
+    <button id="musicButton" class="music-button">
+        <i class="bi bi-music-note"></i> Pause 
+    </button>
+
+    <div class="volume-control">
+        <span class="volume-icon"><i class="bi bi-volume-down-fill"></i></span>
+
+        <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+        >
+    </div>
+
+</div>
+
+<audio id="birthdayMusic" loop>
+    <source src="assets/song.mp3" type="audio/mpeg">
+</audio>
+
+
+  <script src="landing.js"></script>
+  <script src="polaroid-links.js"></script>
+</body>
+</html>

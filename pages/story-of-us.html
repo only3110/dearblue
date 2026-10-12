@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story of Us</title>
+  <link rel="icon" type="image/x-icon" href="assets/snoopy-star.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+  <a class="back" href="../landing.html" data-leave>← kembali</a>
+  <div class="progress"><i id="bar"></i></div>
+
+  <!--
+    CARA PAKAI
+    - Semua teks berkurung siku [ ... ] adalah placeholder: ganti dengan ceritamu.
+    - Foto: tulis <img src="../foto/namafile.jpg" alt=""> di dalam <div class="ph"> atau <div class="pol__photo ph">.
+    - Tanggal jadian untuk penghitung hari: ubah START_DATE di story.js.
+  -->
+
+  <!-- ===== SAMPUL ===== -->
+  <header class="cover">
+    <img class="deco deco--lips" src="../assets/paper/lips-print.png" alt="">
+    <img class="deco deco--news" src="../assets/paper/news-heart.png" alt="">
+    <p class="cover__eyebrow">a story in five CHAPTERs</p>
+    <h1 class="cover__title">STORY OF US</h1>
+    <p class="rule"><span>OUR ARCHIVE</span></p>
+    <nav class="index">
+      <a href="#e1"><b>CHAPTER 001</b><span>The Beginning</span></a>
+      <a href="#e2"><b>CHAPTER 002</b><span>When We Got Closer</span></a>
+      <a href="#e3"><b>CHAPTER 003</b><span>The Random Moments</span></a>
+      <a href="#e4"><b>CHAPTER 004</b><span>Our Favorite Memories</span></a>
+      <a href="#e5"><b>CHAPTER 005</b><span>Where We Are Now</span></a>
+    </nav>
+    <a class="cover__scroll" href="#e1">scroll ↓</a>
+  </header>
+
+  <main class="archive">
+
+    <!-- ===== EXHIBIT 001 ===== -->
+    <section class="exhibit reveal" id="e1">
+      <header class="exhibit__head"><span class="tag">CHAPTER 001</span><h2>THE BEGINNING</h2></header>
+      <div class="sheet">
+        <span class="tape" style="top:-12px; left:30px; rotate:-6deg"></span>
+        <p class="lead">It all started with something that seemed ordinary.<br>A conversation, a few laughs, and somehow… here we are.</p>
+        <div class="facts">
+          <div class="fact"><b>pertama kenal</b><p>kenalan?? bahkan kita langsung ngobrol tanpa perlu kenalan yang gimana gimana banget</p></div>
+          <div class="fact"><b>pertama kali ngobrol</b><p>dari cuma nanya tugas, lama-lama jadi nanyain kabar</p></div>
+          <div class="fact"><b>first impression</b><p>awalnya, aku kira pertemuan kita biasa aja, tapi entah kenapa rasanya ada yang spesial dari kamu</p></div>
+          <div class="fact"><b>momen "oh, dia spesial"</b><p>sejak, dialog pertama yang aku ucapin buat kamu</p></div>
+        </div>
+        <div class="shots">
+          <div class="pol" style="--r:-3deg"><div class="pol__photo ph"><img src="../foto/early-moments-1.jpg" alt="Early Moment 1"></div><p>chat pertama kita</p></div>
+          <div class="pol" style="--r:2.5deg"><div class="pol__photo ph"><img src="../foto/early-moments-2.jpg" alt="Early Moment 2"></div><p>naga langka yang aku bangga banggain ke kamu</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXHIBIT 002 ===== -->
+    <section class="exhibit reveal" id="e2">
+      <header class="exhibit__head"><span class="tag">CHAPTER 002</span><h2>WHEN WE GOT CLOSER</h2></header>
+      <div class="sheet sheet--split">
+        <span class="tape" style="top:-12px; right:40px; rotate:5deg"></span>
+        <ol class="steps">
+          <li><span class="steps__no">01</span><div><h3>The first conversation</h3><p>duluu kita chattan suka bahas hal-hal random, dari tugas, naga baru di dragon city, pokoknya hal random bin ga penting</p></div></li>
+          <li><span class="steps__no">02</span><div><h3>The first time we…</h3><p>habis ituu, pas kita pertama kali ngobrol panjaaaang di bangku depan kelas X, bener bener buat hati aku yakin sama kamu</p></div></li>
+          <li><span class="steps__no">03</span><div><h3>Somewhere along the way…</h3><p class="hand">I realized I really enjoyed having you around.</p></div></li>
+        </ol>
+        <div class="phone"><div class="phone__screen ph"><img src="../foto/mulai-deket.jpg" alt=""></div><!--<small>[screenshot chat]</small>--></div>
+      </div>
+    </section>
+
+    <!-- ===== EXHIBIT 003 ===== -->
+    <section class="exhibit reveal" id="e3">
+      <header class="exhibit__head"><span class="tag">CHAPTER 003</span><h2>THE RANDOM MOMENTS</h2></header>
+      <p class="note">bukan momen besar. justru kejadian kecil yang cuma kita berdua yang ngerti.</p>
+      <div class="cluster">
+        <figure class="pol" style="--r:-4deg"><span class="tape tape--top"></span><div class="pol__photo ph"><img src="../foto/random-01.jpg" alt="Random Moment 1"></div><figcaption>"main pe es sambil pamer katepe"</figcaption></figure>
+        <figure class="pol" style="--r:3deg"><span class="tape tape--top"></span><div class="pol__photo ph"><img src="../foto/random-02.jpeg" alt="Random Moment 2"></div><figcaption>"beliin emi buat bundaa"</figcaption></figure>
+        <figure class="pol" style="--r:-2deg"><span class="tape tape--top"></span><div class="pol__photo ph"><img src="../foto/random-03.jpeg"alt="Random Moment 3"></div><figcaption>"disuruh yayah nganterin anak ceweknya yang paling cantik"</figcaption></figure>
+        <figure class="pol" style="--r:4deg"><span class="tape tape--top"></span><div class="pol__photo ph"><img src="../foto/random-04.jpg" alt="Random Moment 4"></div><figcaption>"wop kacamatanya syahrini ta itu"</figcaption></figure>
+        <figure class="pol" style="--r:-3deg"><span class="tape tape--top"></span><div class="pol__photo ph"><img src="../foto/random-05.jpg" alt="Random Moment 5"></div><figcaption>"chukiiii"</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== EXHIBIT 004 ===== -->
+    <section class="exhibit reveal" id="e4">
+      <header class="exhibit__head"><span class="tag">CHAPTER 004</span><h2>OUR FAVORITE MEMORIES</h2></header>
+      <div class="memories">
+        <article class="memory"><div class="memory__photo ph"><img src="../foto/favmo-01.jpg" alt=""></div><h3>The First ACOW</h3><p>perayaan untuk kerja keras kitaa berbulan-bulan</p></article>
+        <article class="memory"><div class="memory__photo ph"><img src="../foto/favmo-05.jpg" alt=""></div><h3>Still a Tough Fight</h3><p>satu event.. cuma ga satu bagiaan..</p></article>
+        <article class="memory"><div class="memory__photo ph"><img src="../foto/favmo-02.jpg" alt=""></div><h3>Graduation on Duty</h3><p>meskipun ga jadi pasangaan, yang penting kita satu tugaas</p></article>
+        <article class="memory"><div class="memory__photo ph"><img src="../foto/favmo-03.jpg" alt=""></div><h3>The Haze of Bulbas</h3><p>sumpil terang banget kayak masa depan kita.. hehe</p></article>
+        <article class="memory memory--chat">
+          <div class="memory__photo chat">
+            <span class="bubble bubble--l">[cerita puaaanjang pokoknyaa]</span><span class="bubble bubble--r">[aku dengerinn dan aku balass dengan sepenuh hati]</span><span class="bubble bubble--l"><img src="../foto/vn.jpg" alt=""></span>
+          </div>
+          <h3>The Best Conversation</h3><p>setelah semuaa curhatan dan ceritaa kita hari itu, kalimat "i love you" dari kamu bener-bener terngian-ngiang</p>
+        </article>
+        <article class="memory"><div class="memory__photo ph"><img src="../foto/favmo-04.jpg" alt=""></div><h3>Our Last ACOWW</h3><p>yieey acow terakhir kitaa tapi bukan berarti akhir dari cerita indah kita</p></article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== TRANSISI: SOMEWHERE ALONG THE WAY ===== -->
+  <section class="interlude" id="interlude">
+    <img class="interlude__paper" src="../assets/love-you.png" alt="">
+    <h2 class="interlude__title">SOMEWHERE ALONG THE WAY</h2>
+    <p class="line" style="--i:0">Somewhere along the way,</p>
+    <p class="line" style="--i:1">you stopped being just someone I knew.</p>
+    <p class="line" style="--i:2">You became someone I looked for.</p>
+    <p class="line" style="--i:3">Someone I wanted to tell things to.</p>
+    <p class="line" style="--i:4">Someone whose presence made ordinary days<br>feel a little different.</p>
+  </section>
+
+  <main class="archive archive--end">
+    <!-- ===== EXHIBIT 005 ===== -->
+    <section class="exhibit reveal" id="e5">
+      <header class="exhibit__head"><span class="tag">CHAPTER 005</span><h2>WHERE WE ARE NOW</h2></header>
+      <div class="then-now">
+        <div class="tn tn--then"><b>THEN</b><p>Two people who were still figuring each other out.</p></div>
+        <div class="tn tn--now"><b>NOW</b><p>Two people who have collected countless little memories together.</p></div>
+      </div>
+      <div class="sheet sheet--stats">
+        <div class="stat"><span class="stat__num" id="days">—</span><span class="stat__label">hari bersama</span><small id="sinceNote"></small></div>
+        <div class="fact"><b>yang berubah sejak awal</b><p>kalu diliat-liat banyak ya yang berubah, mulai dari diri kita masing-masing sampai cara kita nge<i>treat</i> satu sama lain</p></div>
+        <div class="fact"><b>kebiasaan kita sekarang</b><p>tiap kabar yang kita tuker, tiap rasa yang kita bagi, dan tiap momen yang kita ceritain semua hal-hal yang mungkin remeh, tapi berharga banget buat aku</p></div>
+        <div class="fact"><b>yang kusyukuri dari kita</b><p>aku bersyukur kita bisa ngelewatin jalan yang panjang dan ga mudah. ada jatuh bangun dan jatuh cinta lagi di setiap waktu yang buat kita makin kuat ngejalanin hubungan ini</p></div>
+      </div>
+      <p class="finale">And somehow, I still want to know<br>what happens next.</p>
+    </section>
+
+    <nav class="next">
+      <a href="../landing.html" data-leave>← kembali ke halaman utama</a>
+      <a href="little-things.html" data-leave>selanjutnya: little things →</a>
+    </nav>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="story.js"></script>
+</body>
+</html>

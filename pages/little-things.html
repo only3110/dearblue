@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Things That Remind Me of You</title>
+  <link rel="icon" type="image/x-icon" href="../assets/snoopy-star.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="things.css">
+</head>
+<body>
+  <a class="back" href="../landing.html" data-leave>← kembali</a>
+
+  <header class="head">
+    <h1>little things that remind me of you</h1>
+    <p>klik benda-benda di meja ini</p>
+    <p class="count"><span id="found">0</span> / <span id="total">0</span> ditemukan</p>
+  </header>
+
+  <!--
+    CARA PAKAI
+    - Tiap benda = satu <button class="thing">. Ganti ceritanya di atribut data-story, judul di data-title.
+    - Posisi: --x (kiri), --y (atas), --w (lebar), --r (kemiringan). Mau tambah benda? Salin satu blok.
+    - Gambar benda ada di folder ../assets/things/ (kamu bisa pakai gambarmu sendiri).
+  -->
+  <main class="table" id="table">
+    <button class="thing" style="--x:3%; --y:19%; --w:7.5; --r:-6deg" data-title="Cuking"
+            data-story="all the cuteness that always remind me of you.">
+      <img src="../assets/cuking.png" alt="cuking">
+    </button>
+    <button class="thing" style="--x:21%; --y:21%; --w:13; --r:5deg" data-title="Dubai Chewy Kuki"
+            data-story="one of your favorite snacks, sorry i can't bring it to you.">
+      <img src="../assets/cassette.png" alt="Dubai Chewy Kuki">
+    </button>
+    <button class="thing" style="--x:45%; --y:19%; --w:7.5; --r:-8deg" data-title="UNHAN"
+            data-story="your biggest dream that you are working hard to achieve.">
+      <img src="../assets/logo unhan.png" alt="UNHAN">
+    </button>
+    <button class="thing" style="--x:61%; --y:21%; --w:13; --r:3deg" data-title="Lagu kita"
+            data-story="the song that always played when we were talking together, about the days, the nights, and the moments that we shared.">
+      <img src="../assets/music-player.png" alt="Lagu kita">
+    </button>
+    <button class="thing" style="--x:83%; --y:17%; --w:8.5; --r:10deg" data-title="Sbupy"
+            data-story="the cute little dog you always adore.">
+      <img src="../assets/snoopy-felt.png" alt="Sbupy">
+    </button>
+    <button class="thing" style="--x:5%; --y:46%; --w:14; --r:6deg" data-title="Langit dan Laut"
+            data-story="the great things with your favorite color.">
+      <img src="../assets/ocean.jpg" alt="Langit dan Laut">
+    </button>
+    <button class="thing" style="--x:26%; --y:45%; --w:10.5; --r:-5deg" data-title="Butterschotch Latte"
+            data-story="your mood booster">
+      <img src="../assets/butterscotch.png" alt="Butterscotch Latte">
+    </button>
+    <button class="thing" style="--x:40%; --y:43%; --w:13; --r:0deg" data-title="Zootopia"
+            data-story="our first move date">
+      <img src="../assets/zoo.png" alt="Zootopia">
+    </button>
+    <button class="thing" style="--x:62%; --y:46%; --w:10; --r:-4deg" data-title="Pariss"
+            data-story="the city of love, where we dream to go together someday.">
+      <img src="../assets/stamp-prs.png" alt="Paris">
+    </button>
+    <button class="thing" style="--x:85%; --y:40%; --w:5.5; --r:8deg" data-title="Gitar"
+            data-story="for my beautiful guitarist.">
+      <img src="../assets/guitar-small.png" alt="Gitar">
+    </button>
+    <button class="thing" style="--x:4%; --y:73%; --w:14; --r:-3deg" data-title="Paus"
+            data-story="again, the magnificent creature with your color">
+      <img src="../assets/whales.png" alt="Paus">
+    </button>
+    <button class="thing" style="--x:23%; --y:72%; --w:8.5; --r:9deg" data-title="Taekwondo"
+            data-story="my atlet profesional sedunia antero jagad raya.">
+      <img src="../assets/taekwondo.png" alt="Taekwondo">
+    </button>
+    <button class="thing" style="--x:40%; --y:73%; --w:10; --r:-6deg" data-title="Hadiah"
+            data-story="the first gift that you gave me and always be my favorite thing">
+      <img src="../assets/sweater.png" alt="Hadiah">
+    </button>
+    <button class="thing" style="--x:54%; --y:74%; --w:12; --r:5deg" data-title="Bangku depan kelas"
+            data-story="saksi bisu awal cerita kita">
+      <img src="../assets/bench.png" alt="Bangku depan kelas">
+    </button>
+    <button class="thing" style="--x:77%; --y:72%; --w:8; --r:-10deg" data-title="Bulan"
+            data-story="the friend that accompanies our nights">
+      <img src="../assets/moon.png" alt="Bulan">
+    </button>
+    <button class="thing" style="--x:88%; --y:68%; --w:9; --r:-6deg" data-title="Bunga"
+            data-story="the scent, beauty, and the sentimental">
+      <img src="../assets/flower1.png" alt="Bunga">
+    </button>
+  </main>
+
+  <p class="finale" id="finale" hidden>kamu sudah menemukan semuanya.<br>tapi sebenarnya masih banyak lagi yang belum sempat kutulis 💙</p>
+
+  <div class="overlay" id="overlay" hidden>
+    <div class="note" role="dialog" aria-modal="true" aria-labelledby="nTitle">
+      <img class="note__paper" src="../assets/paper/lined-hearts-2.png" alt="">
+      <span class="tape" style="top:-8px; left:38%; rotate:-4deg"></span>
+      <button class="note__x" aria-label="Tutup">✕</button>
+      <img class="note__thing" id="nImg" alt="">
+      <div class="note__text">
+        <h2 id="nTitle"></h2>
+        <p id="nStory"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="things.js"></script>
+</body>
+</html>

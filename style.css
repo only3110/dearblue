@@ -1,0 +1,75 @@
+/* ====== PENGATURAN TAMPILAN (ubah di sini) ====== */
+:root {
+  --bg-color: #ffffff;        /* warna latar */
+  --text-color: #111111;      /* warna teks */
+  --caret-color: #111111;     /* warna kursor */
+  --font-family: "Courier New", Courier, monospace;
+  --font-size: 1rem;          /* ukuran teks */
+  --caret-width: 2px;
+  --blink-speed: 0.9s;        /* kecepatan kursor berkedip */
+  --sub-color: #888888;       /* warna teks bawah */
+  --sub-size: 0.8rem;         /* ukuran teks bawah */
+  --sub-gap: 12px;            /* jarak dari kalimat utama */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.intro {
+  height: 100%;
+  display: flex;
+  align-items: center;          /* tengah secara vertikal */
+  justify-content: center;      /* tengah secara horizontal */
+  cursor: pointer;
+  user-select: none;
+}
+
+.intro__content { position: relative; }
+
+/* Teks bawah: tidak menggeser posisi kalimat utama */
+.intro__sub {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: var(--sub-gap);
+  white-space: nowrap;
+  color: var(--sub-color);
+  font-size: var(--sub-size);
+}
+
+.intro__text { position: relative; display: inline-block; white-space: normal; }
+
+/* Salinan tak terlihat dari kalimat penuh: memesan lebar agar posisi teks stabil */
+.intro__ghost { visibility: hidden; white-space: pre; }
+
+/* Teks yang sedang diketik, ditumpuk tepat di atas ghost */
+.intro__typed { position: absolute; left: 0; top: 0; white-space: pre; }
+
+.intro__caret {
+  display: inline-block;
+  width: var(--caret-width);
+  height: 1.1em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: var(--caret-color);
+  animation: blink var(--blink-speed) steps(1) infinite;
+}
+
+/* Saat mengetik/menghapus, kursor tidak berkedip */
+.intro__caret.is-busy { animation: none; }
+
+@keyframes blink { 50% { opacity: 0; } }
+
+
+/* Fade out saat pindah ke landing page */
+body { transition: opacity 0.5s ease; }
+body.is-leaving { opacity: 0; }

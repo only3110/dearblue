@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Museum of You</title>
+  <link rel="icon" type="image/x-icon" href="../assets/snoopy-star.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="frames.css">
+  <link rel="stylesheet" href="museum.css">
+</head>
+<body>
+  <a class="back" href="../landing.html" data-leave>← kembali</a>
+
+  <header class="hero">
+    <p class="hero__eyebrow">now showing</p>
+    <h1 class="hero__title">Museum of You</h1>
+    <p class="hero__sub">a small collection of the moments that made you, you.</p>
+  </header>
+
+  <!--
+    CARA MENGGANTI FOTO: di dalam <span class="photo ph"> tulis
+        <img src="../foto/namafile.jpg" alt="">
+    Judul, tanggal, dan cerita yang muncul saat bingkai diklik ada di atribut
+    data-title / data-date / data-desc. Mau tambah bingkai? Salin satu blok <button class="exhibit ...">
+    lalu ubah --x (kiri), --y (atas), --w (lebar) dan nama bingkai (mask-oval, mask-heart, mask-round,
+    mask-rect-p1, mask-rect-p2, mask-rect-l1, mask-rect-l2, mask-rect-l3 + file frame-*.png yang sama).
+  -->
+  <main class="stage">
+    <div class="shadowbox">
+      <div class="room" id="room">
+        <div class="wall"></div>
+        <div class="wainscot"></div>
+        <div class="floor"></div>
+
+        <img class="chandelier" src="../assets/frames/chandelier.png" alt="">
+
+      <button class="exhibit mask-oval" style="--x:3%; --y:17%; --w:13%"
+              data-title="Exhibit 01" data-date="[21-12-2024]" data-desc="[lombaa with my sweater..]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-01.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-oval.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-round" style="--x:20%; --y:14%; --w:8%"
+              data-title="Exhibit 02" data-date="[31-08-2025]" data-desc="[lagi sparinggg]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-02.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-round.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-rect-l1" style="--x:69%; --y:7%; --w:14%"
+              data-title="Exhibit 03" data-date="[05-09-2025]" data-desc="[sarapan sama d'genk]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-03.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-rect-l1.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-rect-p1" style="--x:63%; --y:48%; --w:9%"
+              data-title="Exhibit 04" data-date="[25-06-2025]" data-desc="[wopp lagi kasi mam singaa]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-04.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-rect-p1.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-heart" style="--x:32%; --y:34%; --w:12%"
+              data-title="Exhibit 05" data-date="[08-04-2026]" data-desc="[chukii jadi tatakan laptop mbak sekre]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-05.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-heart.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-rect-p2" style="--x:62%; --y:30%; --w:17%"
+              data-title="Exhibit 06" data-date="[07-06-2025]" data-desc="[boleh ga sii aku jatuh cinta lagi..]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-06.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-rect-p2.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-rect-l2" style="--x:18%; --y:47%; --w:13%"
+              data-title="Exhibit 07" data-date="[03-11-2025]" data-desc="[otw foto katepee yeiyy 17 tahuun&#127881]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-07.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-rect-l2.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-rect-l3" style="--x:82%; --y:33%; --w:11%"
+              data-title="Exhibit 08" data-date="[20-09-2026]" data-desc="[after MUP, thank you for all your work my sweet pelatihan]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-08.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-rect-l3.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-oval" style="--x:86%; --y:4%; --w:12%"
+              data-title="Exhibit 09" data-date="[29-08-2026]" data-desc="[detik-detik syesye cantik tampil acow]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-09.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-oval.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-heart" style="--x:50%; --y:44%; --w:8%"
+              data-title="Exhibit 10" data-date="[22-03-2025]" data-desc="[cantikk bangett.. mau ikut bukber jugaa]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-10.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-heart.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-heart" style="--x:46%; --y:21%; --w:14%"
+              data-title="Exhibit 11" data-date="[10-10-2025]" data-desc="[swit seventin.. maaf aku ga bisa ngerayain ultah kamu..]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-11.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-heart.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-heart" style="--x:48%; --y:5%; --w:14%"
+              data-title="Exhibit 12" data-date="[04-10-2025]" data-desc="[sukaa face paintingnyaa lucuu.. semangat lombanyaah]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-13.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-heart.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-heart" style="--x:32%; --y:3%; --w:12%"
+              data-title="Exhibit 13" data-date="[05-10-2025]" data-desc="[yeiyy congrats juaranyaa bbyy.. keyeen fans no. 1]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-12.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-heart.png" alt=""></span>
+      </button>
+      <button class="exhibit mask-heart" style="--x:35%; --y:52%; --w:12%"
+              data-title="Exhibit 14" data-date="[xx-xx-kicik pokoknya]" data-desc="[and lastly.. the little girl who would become my best friend, my sister, my partner in crime, my everything. happy birthday, faa. i love you]">
+        <span class="art"><span class="photo ph"><img src="../foto/museum-14.jpg" alt=""></span><img class="frame" src="../assets/frames/frame-heart.png" alt=""></span>
+      </button>
+
+        <div class="visitors" id="visitors"></div>
+        <div class="glass"></div>
+      </div>
+    </div>
+    <p class="hint">klik sebuah bingkai untuk melihatnya lebih dekat</p>
+  </main>
+
+  <dialog class="viewer" id="viewer">
+    <button class="viewer__btn viewer__close" aria-label="Tutup">✕</button>
+    <button class="viewer__btn viewer__nav viewer__prev" aria-label="Sebelumnya">‹</button>
+    <button class="viewer__btn viewer__nav viewer__next" aria-label="Berikutnya">›</button>
+    <div class="viewer__art" id="vArt"></div>
+    <div class="viewer__label">
+      <p class="viewer__no" id="vNo"></p>
+      <h2 id="vTitle"></h2>
+      <p class="viewer__date" id="vDate"></p>
+      <p class="viewer__desc" id="vDesc"></p>
+    </div>
+  </dialog>
+
+  <script src="shared.js"></script>
+  <script src="museum.js"></script>
+</body>
+</html>
